@@ -11,6 +11,14 @@ class PokemonsController < ApplicationController
     end
 
     def create
+        trainer = Trainer.find(params[:trainer_id])
+        pokemon = trainer.pokemons.build({
+            nickname: Faker::Name.first_name,
+            species: Faker::Games::Pokemon.name
+        })
+        #build method allows you to build something on top of the parent resource
+
+        pokemon.save ? render json: pokemon : {message: }
     end
 
     def destroy
