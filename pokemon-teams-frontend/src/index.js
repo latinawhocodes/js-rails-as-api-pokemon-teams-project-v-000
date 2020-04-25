@@ -54,8 +54,15 @@ const renderPokemon = (pokemon) => {
 
 }
 
-const createPokemon = () => {
-
+const createPokemon = (e) => {
+    e.preventDefault()
+    const configObj = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    }
 
 }
 
