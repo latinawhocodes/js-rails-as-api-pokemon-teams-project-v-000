@@ -56,4 +56,9 @@ const renderPokemon = (pokemon) => {
 
 const createPokemon = () => {
 
+
+}
+
+const deletePokemon = () => {
+
 }
