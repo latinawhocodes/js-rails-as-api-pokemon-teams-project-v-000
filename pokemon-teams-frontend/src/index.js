@@ -88,5 +88,5 @@ const deletePokemon = (e) => {
     }
 
     fetch(`${POKEMONS_URL}/${e.target.dataset.pokemonId}`, configObj)
-        .then()
+        e.target.parentElement.remove()
 }
