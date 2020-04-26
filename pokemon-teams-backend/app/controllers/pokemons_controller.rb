@@ -18,7 +18,7 @@ class PokemonsController < ApplicationController
         })
         #build method allows you to build something on top of the parent resource
 
-        pokemon.save ? render json: pokemon : {message: }
+        pokemon.save ? render json: pokemon : {message: pokemon.errors.messages[:team_max][0]}
     end
 
     def destroy
