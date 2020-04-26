@@ -61,8 +61,13 @@ const createPokemon = (e) => {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-        }
+        },
+        body: JSON.stringify({ trainer_id: e.target.dataset.trainer_Id })
     }
+
+    fetch(POKEMONS_URL, configObj)
+        .then(res => res.json())
+        .then(json => {})
 
 }
 
