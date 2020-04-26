@@ -33,7 +33,7 @@ const renderTrainer = (trainerArray) => {
     div.appendChild(ul)
     main.appendChild(div)
 
-    trainerArray.pokemons.forEach(pokemon=> renderPokemon(pokemon))
+    trainerArray.pokemons.forEach(pokemon => renderPokemon(pokemon))
 
 }
 
