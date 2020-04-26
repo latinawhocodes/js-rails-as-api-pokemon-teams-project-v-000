@@ -67,10 +67,26 @@ const createPokemon = (e) => {
 
     fetch(POKEMONS_URL, configObj)
         .then(res => res.json())
-        .then(json => {})
+        .then(json => {
+            if (json.message) {
+                alert(json.message)
+            } else {
+                renderPokemon(json)
+            }
+        })
 
 }
 
-const deletePokemon = () => {
+const deletePokemon = (e) => {
+    e.preventDefault()
+    const configObj = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    }
 
+    fetch(`${POKEMONS_URL}/${e.target.dataset.pokemonId}`, configObj)
+        .then()
 }
