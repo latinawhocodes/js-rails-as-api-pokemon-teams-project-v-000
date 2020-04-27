@@ -47,7 +47,7 @@ const renderPokemon = (pokemon) => {
     button.setAttribute("data-pokemon-id", pokemon.id)
     button.innerHTML = "release"
 
-    button.addEventListener("click", deletePokemon)
+    button.addEventListener("click", deletePokemon())
 
     li.appendChild(button)
     ul.appendChild(li)
